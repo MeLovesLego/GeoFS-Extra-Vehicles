@@ -17,7 +17,7 @@
 
     // ALWAYS CHANGE BACK TO THIS:
     // https://raw.githubusercontent.com/af267/GeoFS-Extra-Vehicles/refs/heads/main/vehicles.json
-    const DATA_URL = "https://raw.githubusercontent.com/af267/GeoFS-Extra-Vehicles/refs/heads/main/vehicles.json";
+    const DATA_URL = "https://raw.githubusercontent.com/MeLovesLego/GeoFS-Extra-Vehicles/main/vehicles.json";
 
     const aircraftButton = document.querySelector('button[data-toggle-panel=".geofs-aircraft-list"]');
     if (!aircraftButton) {
