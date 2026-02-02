@@ -155,7 +155,19 @@
 
                 geofs.aircraft.instance.init(
                     parsed,
-                    geofs.aircraft.instance.getCurrentCoordinates()
+                    // Some GeoFS builds don't expose getCurrentCoordinates(), so use a safe fallback.
+                    let spawn = null;
+                    try {
+                      spawn = geofs.aircraft.instance.getCurrentCoordinates?.();
+                    } catch (e) {}
+                    
+                    if (!Array.isArray(spawn) || spawn.length < 3) {
+                      // Monaco, 200m altitude (safe spawn)
+                      spawn = [43.7347, 7.4206, 200];
+                    }
+                    
+                    geofs.aircraft.instance.init(parsedDefinition, spawn);
+
                 );
             },
             error: function () {
