@@ -201,7 +201,7 @@
 
     console.log("Loading aircraft from:", baseUrl);
 
-    $.ajax(baseUrl + "aircraft.json", {
+    $.ajax(baseUrl + "aircraft.json?v=" + Date.now(), {
       dataType: "text",
       success: function (jsonText) {
         try {
