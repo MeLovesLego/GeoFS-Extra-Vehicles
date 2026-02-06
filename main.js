@@ -14,7 +14,7 @@
 (function () {
   'use strict';
 
-  console.log("GeoFS Extra Vehicles (MeLovesLego fork) running...");
+  console.log("GeoFS Extra Vehicles (MeLovesLego fork version) running...");
 
   // IMPORTANT: use RAW github content URLs
   var RAW_BASE = "https://raw.githubusercontent.com/MeLovesLego/GeoFS-Extra-Vehicles/refs/heads/main/";
